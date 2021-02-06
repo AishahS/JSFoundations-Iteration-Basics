@@ -10,20 +10,26 @@
  */
 function getOdds(numbers) {
   // Your code here
-}
 
+  const n = numbers.filter((n) => n % 2 === 1);
+  return n;
+}
 /**
  * getEvens(numbers):
  * - receives an array of numbers called `numbers`
  * - filters the `numbers` array in order to...
  * - returns an array of only EVEN numbers.
- *
+ *\
+ 0c
  * e.g.
  * getEvens([1, 2, 3, 4, 5, 6, 7, 8, 9]) -> [2, 4, 6, 8]
  * getEvens([11, 35, 52, 14, 56, 601, 777, 888, 999]) -> [52, 14, 56, 888]
  */
 function getEvens(numbers) {
   // Your code here
+
+  const n = numbers.filter((n) => n % 2 === 0);
+  return n;
 }
 
 /**
@@ -37,6 +43,11 @@ function getEvens(numbers) {
  */
 function countOccurences(x, numbers) {
   // Your code here
+  let count = 0;
+  numbers.forEach(function (number) {
+    if (number === x) count++;
+  });
+  return count;
 }
 
 /**
@@ -50,6 +61,10 @@ function countOccurences(x, numbers) {
 
 function makeThemDoctors(students) {
   // Your code here
+  let Dr = [];
+  students.forEach((student) => {
+    Dr.push(`Dr. ${student}`);
+  });
+  return Dr;
 }
-
 module.exports = { getOdds, getEvens, countOccurences, makeThemDoctors };
